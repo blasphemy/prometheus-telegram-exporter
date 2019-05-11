@@ -17,7 +17,7 @@ var msgCounter *prometheus.CounterVec
 
 func main() {
 	b, err := tb.NewBot(tb.Settings{
-		Token:  os.Getenv("TELEGRAM_BOT_TOKEN"), //prod
+		Token:  os.Getenv("TELEGRAM_BOT_TOKEN"),
 		Poller: &tb.LongPoller{Timeout: 10 * time.Second},
 	})
 	if err != nil {
